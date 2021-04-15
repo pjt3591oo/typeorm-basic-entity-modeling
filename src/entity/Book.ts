@@ -3,7 +3,7 @@ import { User } from "./User";
 import { Borrow } from "./Borrow";
 
 @Entity()
-export class Book extends BaseEntity{
+export class Book extends BaseEntity {
 
   @PrimaryGeneratedColumn()
   id: number;
@@ -20,12 +20,12 @@ export class Book extends BaseEntity{
   @UpdateDateColumn()
   updatedAt: string;
 
-  @ManyToMany(type => User, user => user.books, {
-    cascade: true, // equal: pass true
-    onDelete: 'CASCADE' // "RESTRICT"|"CASCADE"|"SET NULL"
-  })
-  @JoinTable()
-  users: User[];
+  // @ManyToMany(type => User, user => user.books, {
+  //   cascade: true, // equal: pass true
+  //   onDelete: 'CASCADE' // "RESTRICT"|"CASCADE"|"SET NULL"
+  // })
+  // @JoinTable()
+  // users: User[];
 
   @ManyToMany(() => Borrow, borrow => borrow.book)
   borrows: Borrow[];

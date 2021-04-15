@@ -36,7 +36,7 @@ createConnection().then(async connection => {
     // const savedBorrow = await connection.manager.save(borrow);
 
 
-    await connection.manager.softDelete(Borrow, {id: 1});
+    // await connection.manager.softDelete(Borrow, {id: 1});
     // let users = await connection.manager.find(User, {
     //     where: {id: 4},
     //     relations: ["posts", "books"]

@@ -21,9 +21,9 @@ export class User {
     @OneToMany(() => Post, post => post.user)
     posts: Post[];
 
-    @ManyToMany(() => Book, book => book.users)
-    books: Book[];
+    // @ManyToMany(() => Book, book => book.users)
+    // books: Book[];
 
-    @ManyToMany(() => Borrow, borrow => borrow.user)
+    @OneToMany(() => Borrow, borrow => borrow.user)
     borrows: Borrow[];
 }
