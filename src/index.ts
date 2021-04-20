@@ -9,6 +9,7 @@ import { PostRepository } from './repository/Post';
 
 createConnection().then(async connection => {
     // const postRepository = connection.getCustomRepository(PostRepository);
+    
     // let post = await postRepository.find({
     //     // where: { id: 14 },
     //     relations: ['user']
@@ -18,16 +19,16 @@ createConnection().then(async connection => {
     // console.log(posts);
 
 
-    // const user = new User();
-    // user.lastName = 'new'
-    // user.firstName = 'mung'
-    // user.age = 20;
-
+    const user = new User();
+    user.lastName = 'new';
+    user.firstName = 'mung';
+    user.age = 20;
+    const savedUser = await connection.manager.save(user);
+   
     // const book = new Book();
     // book.name = 'very hard typescript!!'
     // book.count = 17;
 
-    // const savedUser = await connection.manager.save(user);
     // book.save();
     
     // const borrow = new Borrow()

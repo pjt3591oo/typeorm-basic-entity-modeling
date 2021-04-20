@@ -5,8 +5,11 @@
    "username": "root",
    "password": "password",
    "database": "mung",
-   "synchronize": true,
+   "synchronize": false,
    "logging": true,
+   "extra": {
+      "charset": "utf8mb4_unicode_ci"
+   },
    "entities": [
       "src/entity/**/*.ts"
    ],
